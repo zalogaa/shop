@@ -3,7 +3,7 @@ package com.shop.pl;
 import java.util.ArrayList;
 
 public class Customer {
-
+//jebac github
 	private Long id = null;
 	 String name;
 	 String surname;

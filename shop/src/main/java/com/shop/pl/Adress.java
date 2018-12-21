@@ -58,7 +58,8 @@ public class Adress {
 		this.customer = customer;
 	}
 	
-	
+//jebany github w dupe
+	//chuja działa
 	
 	
 }
