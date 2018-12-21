@@ -12,6 +12,6 @@ public class Order {
 	@GeneratedValue
 	private Long id;
 	private boolean isPaid;
-	private Customer customer;
+	private User customer;
 	private Date startDate;	
 }

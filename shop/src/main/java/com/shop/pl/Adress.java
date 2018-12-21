@@ -13,7 +13,7 @@ public class Adress {
 	private	String country;
 	private	String zipCode;
 	private	String phoneNumber;
-	private	Customer customer;
+	private	User customer;
 	public String getCity() {
 		return city;
 	}
@@ -44,15 +44,15 @@ public class Adress {
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
-	public Customer getCustomer() {
+	public User getCustomer() {
 		return customer;
 	}
-	public void setCustomer(Customer customer) {
+	public void setCustomer(User customer) {
 		this.customer = customer;
 	}
 	
 	public Adress(Long id, String city, String street, String country, String zipCode, String phoneNumber,
-			Customer customer) {
+			User customer) {
 		super();
 		this.id = id;
 		this.city = city;

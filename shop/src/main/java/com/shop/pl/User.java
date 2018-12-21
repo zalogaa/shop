@@ -7,20 +7,46 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class Customer {
-	
+public class User {
+
 	@Id
 	@GeneratedValue
 	private Long id;
 	private String name;
 	private String surname;
-	private	Adress adress;
+	private Adress adress;
 	private String email;
 	private String password;
 	private Boolean isActive;
-	
+	private List<Role> roles;
 	private List<Order> orders;
-	
+
+	public User(String name, String surname, Adress adress, String email, String password, Boolean isActive,
+			List<Order> orders) {
+		this.name = name;
+		this.surname = surname;
+		this.adress = adress;
+		this.email = email;
+		this.password = password;
+		this.isActive = isActive;
+		this.orders = orders;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public List<Role> getRoles() {
+		return roles;
+	}
+
+	public void setRoles(List<Role> roles) {
+		this.roles = roles;
+	}
 
 	public void setOrders(List<Order> orders) {
 		this.orders = orders;
@@ -74,23 +100,8 @@ public class Customer {
 		this.isActive = isActive;
 	}
 
-
-
 	public List<Order> getOrders() {
 		return orders;
-	}
-
-	public Customer(long id, String name, String surname, Adress adress, String email, String password,
-			Boolean isActive, List<Order> orders) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.surname = surname;
-		this.adress = adress;
-		this.email = email;
-		this.password = password;
-		this.isActive = isActive;
-		this.orders = orders;
 	}
 
 }
