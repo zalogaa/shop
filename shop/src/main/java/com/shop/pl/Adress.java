@@ -1,14 +1,19 @@
 package com.shop.pl;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+@Entity
 public class Adress {
-	
+	@Id
+	@GeneratedValue
 	private Long id = null;
-	String city;
-	String street;
-	String country;
-	String zipCode;
-	String phoneNumber;
-	Customer customer;
+	private String city;
+	private String street;
+	private	String country;
+	private	String zipCode;
+	private	String phoneNumber;
+	private	Customer customer;
 	public String getCity() {
 		return city;
 	}
@@ -57,9 +62,6 @@ public class Adress {
 		this.phoneNumber = phoneNumber;
 		this.customer = customer;
 	}
-	
-//jebany github w dupe
-	//chuja działa
-	
+
 	
 }

@@ -1,18 +1,32 @@
 package com.shop.pl;
 
 import java.util.ArrayList;
+import java.util.List;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import java.util.List;
+
+@Entity
 public class Customer {
-//jebac github
+	
+	@Id
+	@GeneratedValue
 	private Long id = null;
-	 String name;
-	 String surname;
-	 Adress adress;
-	 String email;
-	 String password;
-	 Boolean isActive;
+	private String name;
+	private String surname;
+	private	Adress adress;
+	private String email;
+	private String password;
+	private Boolean isActive;
+	
+	private List<Order> orders;
+	
 
-	ArrayList<String> orders;
+	public void setOrders(List<Order> orders) {
+		this.orders = orders;
+	}
 
 	public String getName() {
 		return name;
@@ -62,18 +76,14 @@ public class Customer {
 		this.isActive = isActive;
 	}
 
-	public ArrayList<String> getOrders() {
+
+
+	public List<Order> getOrders() {
 		return orders;
 	}
 
-	public void setOrders(ArrayList<String> orders) {
-		this.orders = orders;
-	}
-
-	
-
 	public Customer(long id, String name, String surname, Adress adress, String email, String password,
-			Boolean isActive, ArrayList<String> orders) {
+			Boolean isActive, List<Order> orders) {
 		super();
 		this.id = id;
 		this.name = name;
