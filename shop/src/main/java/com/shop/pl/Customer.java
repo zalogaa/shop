@@ -1,19 +1,17 @@
 package com.shop.pl;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import java.util.List;
 
 @Entity
 public class Customer {
 	
 	@Id
 	@GeneratedValue
-	private Long id = null;
+	private Long id;
 	private String name;
 	private String surname;
 	private	Adress adress;
