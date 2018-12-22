@@ -5,6 +5,7 @@ import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
 
 @Entity
 public class User {
@@ -12,12 +13,19 @@ public class User {
 	@Id
 	@GeneratedValue
 	private Long id;
+
+	@NotNull
 	private String name;
+	@NotNull
 	private String surname;
+	@NotNull
 	private Adress adress;
+	@NotNull
 	private String email;
+	@NotNull
 	private String password;
 	private Boolean isActive;
+	private String activeKey;
 	private List<Role> roles;
 	private List<Order> orders;
 
@@ -30,6 +38,14 @@ public class User {
 		this.password = password;
 		this.isActive = isActive;
 		this.orders = orders;
+	}
+
+	public String getActiveKey() {
+		return activeKey;
+	}
+
+	public void setActiveKey(String activeKey) {
+		this.activeKey = activeKey;
 	}
 
 	public Long getId() {
