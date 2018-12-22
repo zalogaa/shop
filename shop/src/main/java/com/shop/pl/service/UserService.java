@@ -20,6 +20,11 @@ public class UserService {
 		userRepository.save(user);
 	}
 
+	public void setActiveUser(User user) {
+		user.setIsActive(true);
+		userRepository.save(user);
+	}
+
 	private static String generateKey() {
 		final String pattern = "qwertyuiopasdfghjklzxcvbnm1234567890";
 		Random random = new Random();
