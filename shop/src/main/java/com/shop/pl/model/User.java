@@ -1,7 +1,5 @@
 package com.shop.pl.model;
 
-import java.util.List;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -13,31 +11,23 @@ public class User {
 	@Id
 	@GeneratedValue
 	private Long id;
-
 	@NotNull
 	private String name;
 	@NotNull
 	private String surname;
-	@NotNull
-	private Adress adress;
 	@NotNull
 	private String email;
 	@NotNull
 	private String password;
 	private Boolean isActive;
 	private String activeKey;
-	private List<Role> roles;
-	private List<Order> orders;
 
-	public User(String name, String surname, Adress adress, String email, String password, Boolean isActive,
-			List<Order> orders) {
+	public User(String name, String surname, String email, String password, Boolean isActive) {
 		this.name = name;
 		this.surname = surname;
-		this.adress = adress;
 		this.email = email;
 		this.password = password;
 		this.isActive = isActive;
-		this.orders = orders;
 	}
 
 	public String getActiveKey() {
@@ -56,18 +46,6 @@ public class User {
 		this.id = id;
 	}
 
-	public List<Role> getRoles() {
-		return roles;
-	}
-
-	public void setRoles(List<Role> roles) {
-		this.roles = roles;
-	}
-
-	public void setOrders(List<Order> orders) {
-		this.orders = orders;
-	}
-
 	public String getName() {
 		return name;
 	}
@@ -82,14 +60,6 @@ public class User {
 
 	public void setSurname(String surname) {
 		this.surname = surname;
-	}
-
-	public Adress getAdress() {
-		return adress;
-	}
-
-	public void setAdress(Adress adress) {
-		this.adress = adress;
 	}
 
 	public String getEmail() {
@@ -114,10 +84,6 @@ public class User {
 
 	public void setIsActive(Boolean isActive) {
 		this.isActive = isActive;
-	}
-
-	public List<Order> getOrders() {
-		return orders;
 	}
 
 }
