@@ -1,4 +1,4 @@
-package com.shop.pl;
+package com.shop.pl.model;
 
 import java.util.Date;
 
