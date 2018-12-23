@@ -1,9 +1,6 @@
-package com.shop.pl.repository;
+package com.shop.pl.application;
 
 import org.springframework.stereotype.Repository;
-
-import com.shop.pl.model.User;
-
 import org.springframework.data.jpa.repository.JpaRepository;
 
 @Repository

@@ -1,18 +1,19 @@
-package com.shop.pl.model;
+package com.shop.pl.application;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class Order {
+public class Role {
+
 	@Id
 	@GeneratedValue
 	private Long id;
-	private boolean isPaid;
+	private String name;
 
-	public Order(boolean isPaid) {
-		this.isPaid = isPaid;
+	public Role(String name) {
+		this.name = name;
 	}
 
 	public Long getId() {
@@ -23,12 +24,12 @@ public class Order {
 		this.id = id;
 	}
 
-	public boolean isPaid() {
-		return isPaid;
+	public String getName() {
+		return name;
 	}
 
-	public void setPaid(boolean isPaid) {
-		this.isPaid = isPaid;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 }

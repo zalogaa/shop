@@ -1,4 +1,4 @@
-package com.shop.pl.security;
+package com.shop.pl.application;
 //package com.shop.pl;
 //package com.shop.security.config;
 //

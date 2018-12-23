@@ -1,18 +1,18 @@
-package com.shop.pl.model;
+package com.shop.pl.application;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class Role {
+public class Category {
 
 	@Id
 	@GeneratedValue
 	private Long id;
 	private String name;
 
-	public Role(String name) {
+	public Category(String name) {
 		this.name = name;
 	}
 

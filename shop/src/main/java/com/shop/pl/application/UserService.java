@@ -1,12 +1,9 @@
-package com.shop.pl.service;
+package com.shop.pl.application;
 
 import java.util.Random;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import com.shop.pl.model.User;
-import com.shop.pl.repository.UserRepository;
 
 @Service
 public class UserService {
